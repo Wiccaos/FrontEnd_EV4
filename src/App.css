@@ -45,7 +45,7 @@ input:active{
   padding-right: 10px;
 }
 
-.subir{
+.subir, .boton-receta{
   background-color: #111;
   color: #fff;
   border: none;
@@ -55,7 +55,7 @@ input:active{
   width: 100px;
 }
 
-.subir:hover {
+.subir:hover, .boton-receta:hover{
   background-color: #333;
 }
 
@@ -65,7 +65,8 @@ input:active{
 }
 
 .nuevo-postit input,
-.nuevo-postit button{
+.nuevo-postit button,
+.boton-receta{
   margin: 10px auto;
   padding: 8px;
   margin-right: 5px;
@@ -94,6 +95,23 @@ input:active{
   box-sizing: border-box;
   box-shadow: 0 0 15px rgb(54, 54, 54);
   margin: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* config de la barra de desplazamiento */
+.postit::-webkit-scrollbar {
+  width: 8px; 
+}
+
+/* config del control deslizante */
+.postit::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); 
+  border-radius: 4px;
+}
+
+.postit::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .postit.importante {
@@ -137,7 +155,8 @@ input[type="checkbox"] {
     margin: 0 auto;
   }
   .nuevo-postit input,
-  .nuevo-postit button {
+  .nuevo-postit button, 
+  .boton-receta button {
     margin: 8px 0;
     width: 100%;
     box-sizing: border-box;
